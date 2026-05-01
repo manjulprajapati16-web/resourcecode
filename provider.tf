@@ -1,10 +1,12 @@
-resource "azurerm_resource_group" "name" {
-    name = "personname"
-    location = "personlocation"
-  
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "4.71.0"
+    }
+  }
 }
-resource "azurerm_resource_group" "name1" {
-    name = "personname1"
-    location = "personlocation1"
-  
+
+provider "azurerm" {
+  features{}
 }
